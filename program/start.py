@@ -60,7 +60,7 @@ async def _human_time_duration(seconds):
 @check_blacklist()
 async def start_(c: Client, message: Message):
     BOT_NAME = me_bot.first_name
-    await message.reply_photo("https://te.legra.ph/file/a936da7971c554abfe825.jpg")
+    await message.reply_photo("https://te.legra.ph/file/0e698fd08d87af2af40f4.jpg")
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Is a bot to play music and video in groups, through the Telegram Group video chat!**
@@ -73,7 +73,7 @@ async def start_(c: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "[► Add me to your Group ◄]",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
