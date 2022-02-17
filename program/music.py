@@ -99,6 +99,9 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 duration = convert_seconds(replied.voice.duration)
         except BaseException:
             pass
+        # recheck
+        if not thumbnail:
+            thumbnail = f"{IMG_5}"
 
         if chat_id in QUEUE:
             await suhu.edit("🔄 Queueing Track...")
@@ -234,8 +237,8 @@ async def play(c: Client, m: Message):
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
                     image = await thumb(thumbnail, title, userid, ctitle)
-                    marrk, ytlink = await ytdl(url)
-                    if marrk == 0:
+                    veez, ytlink = await ytdl(url)
+                    if veez == 0:
                         await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
@@ -309,8 +312,8 @@ async def play(c: Client, m: Message):
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
                 image = await thumb(thumbnail, title, userid, ctitle)
-                marrk, ytlink = await ytdl(url)
-                if marrk == 0:
+                veez, ytlink = await ytdl(url)
+                if veez == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
