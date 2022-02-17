@@ -33,11 +33,11 @@ async def start_set(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
+                        "[► Add me to your Group ◄]",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓basic Guide", callback_data="user_guide")],
+                [InlineKeyboardButton("[► basic Guide ◄]", callback_data="user_guide")],
                 [
                     InlineKeyboardButton("[► Commands ◄]", callback_data="command_list"),
                     InlineKeyboardButton("[► Owner ◄]", url=f"https://t.me/{OWNER_USERNAME}"),
