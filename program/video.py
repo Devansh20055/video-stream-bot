@@ -253,8 +253,8 @@ async def vplay(c: Client, m: Message):
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
                     image = await thumb(thumbnail, title, userid, ctitle)
-                    veez, ytlink = await ytdl(url)
-                    if veez == 0:
+                    marrk, ytlink = await ytdl(url)
+                    if marrk == 0:
                         await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
@@ -449,10 +449,10 @@ async def vstream(c: Client, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
         if match:
-            veez, livelink = await ytdl(link)
+            marrk, livelink = await ytdl(link)
         else:
             livelink = link
-            veez = 1
+            marrk = 1
 
         if veez == 0:
             await loser.edit(f"❌ yt-dl issues detected\n\n» `{livelink}`")
