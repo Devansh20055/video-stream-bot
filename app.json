@@ -12,7 +12,7 @@
         "pyrogram"
     ],
     "website": "https://t.me/marrkchannel",
-    "repository": "https://github.com/marrk85/video-stream",
+    "repository": "https://github.com/marrk85/videostream",
     "success_url": "https://t.me/marrk85",
     "env": {
         "API_ID": {
